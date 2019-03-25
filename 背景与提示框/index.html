@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 网格系统</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/windows.png">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+    *{
+        text-align: center;
+    }
+    
+</style>
+<body>
+    <!--
+        Jumbotron（超大屏幕）会创建一个大的灰色背景框，里面可以设置一些特殊的内容和信息。
+
+        提示: Jumbotron 里头可以放一些 HTML标签，也可以是 Bootstrap 的元素。
+
+      
+    -->
+    <!--
+                我们可以通过在 <div> 元素 中添加 .jumbotron 类来创建 jumbotron
+    -->
+    <div class="jumbotron">
+        <h2>标题</h2>
+        <p>这是个段落</p>
+    </div>
+    <!--  如果你想创建一个没有圆角的全屏幕，可以在 .jumbotron-fluid 类里头的 div添加 .container 或 .container-fluid 类来实现:-->
+    <div class="jumbotron jumbotron-fluid">
+        <h2>标题</h2>
+        <p>这是个段落</p>
+    </div>
+    <!--
+        提示框可以使用 .alert 类, 后面加上 .alert-success, .alert-info,
+         .alert-warning, .alert-danger, .alert-primary, .alert-secondary或 .alert-dark 类来实现:
+    -->
+    <div class="container-fluid">
+        <div class="alert alert-success">成功提示框</div>
+        <div class="alert alert-info">信息提示框</div>
+        <div class="alert alert-warning">警告提示框</div>
+        <div class="alert alert-danger">危险提示框</div>
+        <div class="alert alert-primary">重要提示框</div>
+        <div class="alert alert-secondary">次要提示框</div>
+        <div class="alert alert-dark">深灰色提示框</div>
+    </div>
+    <!--提示框中在链接的标签上添加 alert-link 类来设置匹配提示框颜色的链接：-->
+    <div class="row">
+        <div class="col-2 alert alert-success">
+                <a href="#" class="alert-link">网页链接</a>
+        </div>
+        <!--我们可以在提示框中的 div 中添加 .alert-dismissible 类，
+        然后在关闭按钮的链接上添加 class="close" 和 data-dismiss="alert" 类来设置提示框的关闭操作。-->
+        <div class="col-2 alert alert-info alert-dismissible">
+                提示框中的 div 中添加 .alert-dismissible 类，关闭按钮的链接上添加 class="close" 和 data-dismiss="alert" 类来设置提示框的关闭操作
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+        </div>
+        <div class="col-2 alert alert-primary alert-dismissible fade show">
+              在div中设置  .fade 和 .show 类用于设置提示框在关闭时的淡出和淡入效果
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+          </div>
+    </div>
+</body>
+</html>
