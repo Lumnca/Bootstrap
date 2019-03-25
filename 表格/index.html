@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 网格系统</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/windows.png">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/bootstrap.js"></script>
+</head>
+<body>
+    <!--
+        表格类:
+
+        .table :  基础表格,下划线型表格可以添加以下类型:
+                            .table-striped : 间隔条纹
+                            .table-bordered 类: 可以为表格添加边框
+                            .table-hover 类 : 可以为表格的每一行添加鼠标悬停效果（灰色背景）：
+                            .table-dark 类：可以为表格添加黑色背景：白色字体
+                以上类型可以组合使用。
+    -->
+    <div>
+        <h2>.table :  基础表格,下划线型表格</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>ID</th>
+                    <th>其他</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lumnca</td>
+                    <td>KEY980317</td>
+                    <td>美好时光未来</td>
+                </tr>
+                <tr>
+                    <td>Jgxn</td>
+                    <td>RBP980511</td>
+                    <td>美好时光未来</td>
+                </tr>
+                <tr>
+                    <td>Lnzepg</td>
+                    <td>PAR99301</td>
+                    <td>美好时光未来</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <table class="table table-striped">
+            <h2>.table-striped : 间隔条纹</h2>
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>ID</th>
+                        <th>其他</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lumnca</td>
+                        <td>KEY980317</td>
+                        <td>美好时光未来</td>
+                    </tr>
+                    <tr>
+                        <td>Jgxn</td>
+                        <td>RBP980511</td>
+                        <td>美好时光未来</td>
+                    </tr>
+                    <tr>
+                        <td>Lnzepg</td>
+                        <td>PAR99301</td>
+                        <td>美好时光未来</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <table class="table table-bordered">
+                    <h2>.table-bordered : 每个数据添加边框</h2>
+                    <thead>
+                        <tr>
+                        <th>姓名</th>
+                        <th>ID</th>
+                        <th>其他</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lumnca</td>
+                            <td>KEY980317</td>
+                            <td>美好时光未来</td>
+                        </tr>
+                        <tr>
+                            <td>Jgxn</td>
+                            <td>RBP980511</td>
+                            <td>美好时光未来</td>
+                        </tr>
+                        <tr>
+                            <td>Lnzepg</td>
+                            <td>PAR99301</td>
+                            <td>美好时光未来</td>
+                        </tr>
+                    </tbody>
+            </table>
+            <hr>
+            <table class="table table-hover">
+                    <h2>.table table-hover : 鼠标停留变色形式</h2>
+                    <thead>
+                        <tr>
+                        <th>姓名</th>
+                        <th>ID</th>
+                        <th>其他</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lumnca</td>
+                            <td>KEY980317</td>
+                            <td>美好时光未来</td>
+                        </tr>
+                        <tr>
+                            <td>Jgxn</td>
+                            <td>RBP980511</td>
+                            <td>美好时光未来</td>
+                        </tr>
+                        <tr>
+                            <td>Lnzepg</td>
+                            <td>PAR99301</td>
+                            <td>美好时光未来</td>
+                        </tr>
+                    </tbody>
+            </table>
+            <hr>
+            <table class="table table-hover table-dark">
+                    <h2>.table-dark : 黑色背景</h2>
+                    <thead>
+                        <tr>
+                        <th>姓名</th>
+                        <th>ID</th>
+                        <th>其他</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lumnca</td>
+                            <td>KEY980317</td>
+                            <td>美好时光未来</td>
+                        </tr>
+                        <tr>
+                            <td>Jgxn</td>
+                            <td>RBP980511</td>
+                            <td>美好时光未来</td>
+                        </tr>
+                        <tr>
+                            <td>Lnzepg</td>
+                            <td>PAR99301</td>
+                            <td>美好时光未来</td>
+                        </tr>
+                    </tbody>
+            </table>
+            <!--
+                更换颜色
+                .table-primary	蓝色: 指定这是一个重要的操作
+                .table-success	绿色: 指定这是一个允许执行的操作
+                .table-danger	红色: 指定这是可以危险的操作
+                .table-info	浅蓝色: 表示内容已变更
+                .table-warning	橘色: 表示需要注意的操作
+                .table-active	灰色: 用于鼠标悬停效果
+                .table-secondary	灰色: 表示内容不怎么重要
+                .table-light	浅灰色，可以是表格行的背景
+                .table-dark	深灰色，可以是表格行的背景
+
+                -- --在行添加
+
+                .thead-dark 类用于给表头添加黑色背景， .thead-light 类用于给表头添加灰色背景  --在行添加
+
+                .table-sm 类用于通过减少内边距来设置较小的表格  --在table标签中添加
+
+                .table-responsive 类用于创建响应式表格：在屏幕宽度小于 992px 时会创建水平滚动条，如果可视区域宽度大于 992px 则显示不同效果（没有滚动条）外层div起效
+            .table-responsive-sm	< 576px
+            .table-responsive-md	< 768px
+            .table-responsive-lg	< 992px
+            .table-responsive-xl	< 1200px
+            -->
+            <table class="table table-hover table-bordered">
+                    <h2>.table-dark : 黑色背景</h2>
+                    <thead>
+                        <tr  class="thead-dark">
+                        <th>姓名</th>
+                        <th>ID</th>
+                        <th>其他</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-success">
+                            <td>Lumnca</td>
+                            <td>KEY980317</td>
+                            <td>美好时光未来</td>
+                        </tr>
+                        <tr class="table-info">
+                            <td>Jgxn</td>
+                            <td>RBP980511</td>
+                            <td>美好时光未来</td>
+                        </tr>
+                        <tr class="table-danger">
+                            <td>Lnzepg</td>
+                            <td class="table-warning">PAR99301</td>
+                            <td>美好时光未来</td>
+                        </tr>
+                    </tbody>
+            </table>
+    </div>
+</body>
+</html>

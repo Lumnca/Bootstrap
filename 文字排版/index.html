@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 网格系统</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/windows.png">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/bootstrap.js"></script>
+</head>
+<body>
+<!--
+    Bootstrap 4 默认的 font-size 为 16px, line-height 为 1.5。
+    默认的 font-family 为 "Helvetica Neue", Helvetica, Arial, sans-serif。
+    此外，所有的 <p> 元素 margin-top: 0 、 margin-bottom: 1rem (16px)。  1rem = 16px
+-->
+
+<!--
+    Display 标题类(更大的字体) display-X(1~4)
+-->
+<div class="container">
+    <div class="display-1">display-1 的样式</div>
+    <div class="display-2">display-2 的样式</div>
+    <div class="display-3">display-3 的样式</div>
+    <div class="display-4">display-4 的样式</div>
+</div>
+
+<!--
+    <mark>标签，浅黄背景+高亮
+    <abbr>标签，字体下加虚线 需要加上title属性，鼠标指向虚线可查看title的属性值
+    <blockquote>标签，对于引用的内容可以在 <blockquote> 上添加 .blockquote 类 :
+-->
+<div class="container">
+    <p>这是一个<mark>重点</mark>的事情，它用<abbr title="真正的内容藏在里面">虚线</abbr>表示</p>
+
+    <blockquote class="blockquote">For 50 years, WWF has been protecting the future of nature. 
+        The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members
+         in the United States and close to 5 million globally.
+    </blockquote>
+
+    <blockquote class="blockquote-footer">
+        From Lumnca Say
+    </blockquote>
+
+    <!--
+        blockquote : 20px一般字体
+        blockquote-footer : 80%基础字体的大小，含有浅色前划线（———）的样式
+    -->
+
+    <!--
+        其他样式:
+        .font-weight-bold	加粗文本	
+        .font-weight-normal	普通文本	
+        .font-weight-light	更细的文本
+        .font-italic	斜体文本
+        .lead	让段落更突出
+        .small	指定更小文本 (为父元素的 85% )
+        .text-left	左对齐	
+        .text-center	居中	
+        .text-right	右对齐
+        .text-justify	设定文本对齐,段落中超出屏幕部分文字自动换行	
+        .text-nowrap	段落中超出屏幕部分不换行	
+        .text-uppercase	设定文本大写	
+        .text-capitalize	设定单词首字母大写
+        .initialism	显示在 <abbr> 元素中的文本以小号字体展示，且可以将小写字母转换为大写字母
+        .list-unstyled	移除默认的列表样式，列表项中左对齐 ( <ul> 和 <ol> 中)。
+            这个类仅适用于直接子列表项 (如果需要移除嵌套的列表项，你需要在嵌套的列表中使用该样式)
+
+        .list-inline	将所有列表项放置同一行	
+        .pre-scrollable	使 <pre> 元素可滚动，代码块区域最大高度为340px,一旦超出这个高度,就会在Y轴出现滚动条
+    -->
+    <div class="font-weight-bold">.font-weight-bold</div>
+    <div class="font-weight-normal">.font-weight-normal</div>
+    <div class="font-weight-light">.font-weight-light</div>
+    <div class="font-italic">font-italic</div>
+    <div class="lead">.lead</div>
+    <div class="small">.small</div>
+    <div class="text-left">.text-left</div>
+    <div class="text-center">.text-center</div>
+    <div class="text-right">.text-right</div>
+    <div class="text-justify">.text-justify设定文本对齐,段落中超出屏幕部分文字自动换行.text-justify设定文本对齐,段落中超出屏幕部分文字自动换行.text-justify设定文本对齐,段落中超出屏幕部分文字自动换行</div>
+    <div class="text-nowrap">.text-nowrap段落中超出屏幕部分不换行.text-nowrap段落中超出屏幕部分不换行.text-nowrap段落中超出屏幕部分不换行.text-nowrap段落中超出屏幕部分不换行</div>
+    <div class="text-uppercase"> this is my love and i love you</div>
+    <div class="text-capitalize">this is my love and i love you</div>
+
+</div>
+
+
+
+</body>
+</html>
