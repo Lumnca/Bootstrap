@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 网格系统</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/windows.png">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+</head>
+<style>
+    *{
+        text-align: center;
+    }
+    
+</style>
+<body>
+    <!--
+        与样式语句一样，在可以声明按钮的标签中添加格式为class = "btn btn-样式" 样式如下success，primary,warning,danger,dark,light,dark
+    -->
+    <div class="container">
+        <button type="button" class="btn">基本样式按钮</button>
+        <button type="button" class="btn btn-success">成功样式按钮</button>
+        <button type="button" class="btn btn-info">信息样式按钮</button>
+        <input type="button" class="btn btn-primary" value="主要样式按钮">
+        <input type="button" class="btn btn-warning" value="警告样式按钮">
+        <input type="button" class="btn btn-danger" value="危险样式按钮">
+        <button type="button" class="btn btn-dark">黑色样式按钮</button>
+        <button type="button" class="btn btn-light">浅色按钮样式</button>
+    </div>
+    <hr>
+    
+    <div class="container">
+        <!--还支持按钮链接-->
+        <a href="https://daohang.qq.com/?fr=hmpage" class="btn btn-success">按钮链接</a>
+        <!--边框按钮 只需要在原有格式中间加上outline 如 btn-outline-primary-->
+        <button type="button" class="btn btn-outline-primary">边框按钮</button>
+        <!--还可以声明不同大小的按钮,默认是中等，大按钮为btn-lg，小按钮为btn-sm  -->
+        <button type="button" class="btn btn-danger btn-lg">大按钮</button>
+        <button type="button" class="btn btn-danger btn-sm">小按钮</button>
+    </div>
+    <hr>
+    <!--块级按钮可以与div等块级元素等长-->
+    <div class="row">
+        <div class="col-1">
+            <button class="btn btn-info btn-block">块级按钮</button>
+        </div>
+        <div class="col-2">
+                <button class="btn btn-info btn-block">块级按钮</button>
+        </div>
+        <div class="col-3">
+                <button class="btn btn-info btn-block">块级按钮</button>
+        </div>
+        <div class="col-4">
+                <button class="btn btn-info btn-block">块级按钮</button>
+        </div>
+    </div>
+    <hr>
+    <!--
+        .active 类可以设置按钮是可用的， disabled 属性可以设置按钮是不可点击的
+        。 注意 <a> 元素不支持 disabled 属性，你可以通过添加 .disabled 类来禁止链接的点击。
+    -->
+    <div class="container">
+            <input type="button" class="btn btn-success active" onclick="Act" value="可点击按钮">
+            <input type="button" class="btn btn-success " id="falg" disabled value="点击按钮">
+    </div>
+    <hr>
+    <!--
+        允许将按钮放在同一行上。可以在 <div> 元素上添加 .btn-group 类来创建按钮组。
+        可以使用 .btn-group-lg|sm 类来设置按钮组的大小。
+        可以使用 .btn-group-vertical 类来创建垂直的按钮组：
+    -->
+    <div class="container">
+            <div class=" btn-group">
+                    <button type="button" class="btn btn-success">按钮一</button>
+                    <button type="button" class="btn btn-info">按钮二</button>
+                    <input type="button" class="btn btn-primary" value="按钮三">                
+            </div>
+            <div class="btn-group btn-group-sm">
+                    <button type="button" class="btn btn-success">按钮一</button>
+                    <button type="button" class="btn btn-info">按钮二</button>
+                    <input type="button" class="btn btn-primary" value="按钮三">                
+            </div>
+            <div class=" btn-group-vertical">
+                    <button type="button" class="btn btn-success">按钮一</button>
+                    <button type="button" class="btn btn-success">按钮二</button>
+                    <button type="button" class="btn btn-success">按钮三</button>              
+            </div>
+    </div>
+    <hr>
+    <!--
+        下拉菜单按钮,两种形式，意思下拉菜单与按钮称为一体，点击按钮任意出触发下拉。dropdown-toggle声明这种形式
+        而是，下拉按钮与按钮本分分隔开，下拉那妞需要自己创建。
+
+
+    -->
+    <div class="container">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">按钮一</button>
+            <button type="button" class="btn btn-primary">按钮二</button>
+            
+            <div class="btn-group">
+                <!--dropdown-toggle类为第一中形式  data-toggle="dropdown"固定语法，不可改变-->
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                     选择一项
+                </button>
+                <!--紧接着创建dropdown-menu代表下拉框，可自行定义，不一定是这个大小-->
+                <div class="dropdown-menu">
+                    <!--列出选项-->
+                    <a class="dropdown-item" href="#">Tablet</a>
+                    <a class="dropdown-item" href="#">Smartphone</a>
+                    </div>
+                </div>
+        </div>
+        <div class="btn-group">
+                <button type="button" class="btn btn-primary">选择一项</button>
+                <!--需要在原有基础上额外声明dropdown-toggle-split-->
+                <!--添加下拉样式按钮-->
+                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"> 
+                    <!--常用形式-->                
+                    <span class="caret"></span>
+                </button>
+                <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Tablet</a>
+                        <a class="dropdown-item" href="#">Smartphone</a>
+                </div>
+         </div>
+         <!--垂直下拉，原理一样-->
+         <div class="btn-group-vertical">
+                <button type="button" class="btn btn-primary">按钮一</button>
+                <button type="button" class="btn btn-primary">按钮二</button>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        选择一项
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Tablet</a>
+                    <a class="dropdown-item" href="#">Smartphone</a>
+                  </div>
+                </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
