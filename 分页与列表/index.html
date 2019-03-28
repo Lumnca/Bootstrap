@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 网格系统</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/windows.png">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/bootstrap.js"></script>
+</head>
+<body>
+    <!--
+        Bootstrap 4 可以很简单的实现分页效果。
+        要创建一个基本的分页可以在 <ul> 元素上添加 .pagination 类。然后在 <li> 元素上添加 .page-item 类
+    -->
+    <div class="row">
+        <div class="col">
+            <ul class="pagination">
+                <!--连接需要添加page-link才能显示块状-->
+                <li class="page-item"><a href="#" class="page-link">首页</a></li>
+                <li class="page-item"><a href="#" class="page-link">1</a></li>
+                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                <li class="page-item"><a href="#" class="page-link">3</a></li>
+                <li class="page-item"><a href="#" class="page-link">4</a></li>
+                <li class="page-item"><a href="#" class="page-link">尾页</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <ul class="pagination">
+                <!--设置active可以显示高亮，代表本页-->
+                <li class="page-item"><a href="#" class="page-link">首页</a></li>
+                <li class="page-item active" onclick="change(7)"><a href="#" class="page-link">1</a></li>
+                <li class="page-item" onclick="change(8)"><a href="#" class="page-link">2</a></li>
+                <li class="page-item" onclick="change(9)"><a href="#" class="page-link">3</a></li>
+                <li class="page-item"><a href="#" class="page-link">尾页</a></li>
+            </ul>
+        </div>
+        <div class="col">
+                <ul class="pagination">
+                    <!--设置disable禁止点击触发-->
+                    <li class="page-item disabled"><a href="#" class="page-link">页数</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">尾页</a></li>
+                </ul>
+        </div>
+        <!--.pagination-lg 类设置大字体的分页条目，.pagination-sm 类设置小字体的分页条目:-->
+        <div class="col">
+                 <!--在ul处添加-->
+                <ul class="pagination pagination-lg">
+                    <li class="page-item disabled"><a href="#" class="page-link">页数</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">尾页</a></li>
+                </ul>
+        </div>
+        <div class="container">
+                <h2>面包屑导航</h2>
+                <p>.breadcrumb 和 .breadcrumb-item 类用于设置面包屑导航：</p>                  
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Photos</a></li>
+                  <li class="breadcrumb-item"><a href="#">Summer 2017</a></li>
+                  <li class="breadcrumb-item"><a href="#">Italy</a></li>
+                  <li class="breadcrumb-item active">Rome</li>
+                </ul>
+              </div>
+    </div>
+    <hr>
+    <!--要创建列表组，可以在 <ul> 元素上添加 .list-group 类, 在 <li> 元素上添加 .list-group-item 类:-->
+    <div class="container">
+        <ul class="list-group">
+            <!--active为高亮,disablied-->
+            <li class="list-group-item">Lumnca</li>
+            <li class="list-group-item active">Kailly</li>
+            <li class="list-group-item">Kay</li>
+            <li class="list-group-item disabled">Remialy</li>
+        </ul>
+        <!--
+            要创建一个链接的列表项，可以将 <ul> 替换为 <div> ， <a> 替换 <li>。如果你想鼠标悬停显示灰色背景就添加.list-group-item-action 类:
+                列表项目的颜色可以通过以下列来设置： .list-group-item-success, list-group-item-warning, list-group-item-info,
+                 list-group-item-warning, .list-group-item-danger,
+                  list-group-item-dark 和 list-group-item-light:
+        -->
+        <div>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-success">Item1</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Item2</a>
+            <a href="#" class="list-group-item list-group-item-action">Item3</a>
+            <a href="#" class="list-group-item list-group-item-action">Item4</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Item5</a>
+            <a href="#" class="list-group-item list-group-item-action">Item6</a>
+        </div>
+    </div>
+</body>
+<script>
+    //换页脚本
+    var i = 7;
+    function change(n){
+        var old = document.getElementsByTagName("li")[i];
+        //移除class类
+        old.classList.remove("active");
+
+        var li = document.getElementsByTagName("li")[n];
+        //添加class类
+        li.classList.add("active");
+
+        i = n;
+    }
+
+</script>
+</html>
