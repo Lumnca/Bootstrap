@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 网格系统</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/windows.png">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/bootstrap.js"></script>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--
+        我们可以通过 Bootstrap4 的 .card 与 .card-body 类来创建一个简单的卡片
+    -->
+    <div class="container">
+        <div class="card">
+            <!-- 主体内容添加card-body -->
+            <div class="card-body">卡片内容</div>
+        </div> 
+        <hr>
+        <!--  .card-header类用于创建卡片的头部样式， .card-footer 类用于创建卡片的底部样式  -->
+        <div class="card">
+            <div class="card-header">头部内容</div>
+            <div class="card-body">这是主体内容</div>
+            <div class="card-footer">尾部内容</div>
+        </div>    
+        <!--
+            Bootstrap 4 提供了多种卡片的背景颜色类： .bg-primary, .bg-success,
+            .bg-info, .bg-warning, .bg-danger, .bg-secondary, .bg-dark 和 .bg-light。
+        -->
+        <hr>
+        <div class="card">
+                <div class="card-header bg-info ">头部内容</div>
+                <div class="card-body bg-primary">这是主体内容</div>
+                <!-- text-white修改颜色 -->
+                <div class="card-footer bg-dark text-white">尾部内容</div>
+        </div>
+        <hr>
+        <!--
+            我们可以在元素上使用 .card-title 类来设置卡片的标题 。 .card-text 类用于设置卡片正文的内容。 .card-link 类用于给链接设置颜色。
+        -->
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title"> 标题 </h3>
+                <p class="card-text"> 正文:我是一个好好的人 </p>
+                <a href="#">链接地址1</a>
+                <a href="#">链接地址2</a>
+            </div>
+        </div>
+        <hr>
+        <!--
+            我们可以给 <img> 添加 .card-img-top（图片在文字上方） 或 .card-img-bottom（图片在文字下方 来设置图片卡片
+        -->
+        <div class="row">
+                <div class="card" style="width:30%">
+                        <img src="http://static.runoob.com/images/mix/img_avatar.png" class="card-img-top">
+                        <div class="card-body">
+                            <h2 class="card-title">用户信息</h2>
+                            <p class="card-body">Lumnca</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width:30%">
+                            
+                            <div class="card-body">
+                                <h2 class="card-title">用户信息</h2>
+                                <p class="card-body">Lumnca</p>
+                            </div>
+                            <img src="http://static.runoob.com/images/mix/img_avatar.png" class="card-img-bottom">
+                    </div>
+                    <div class="card" style="width:30%" >
+                        <!--如果图片要设置为背景，可以使用 .card-img-overlay 类,添加到需要作为背景的框-->
+                            <img src="http://static.runoob.com/images/mix/img_avatar.png" class="">
+                            <div class="card-img-overlay">
+                                <h2 class="card-title">用户信息</h2>
+                                <p class="card-body">Lumnca</p>
+                            </div>
+                    </div>
+        </div>
+    </div>
+    <hr>
+    <!--
+        .dropdown 类用来指定一个下拉菜单。
+        我们可以使用一个按钮或链接来打开下拉菜单， 按钮或链接需要添加 .dropdown-toggle 和 data-toggle="dropdown" 属性。
+        <div> 元素上添加 .dropdown-menu 类来设置实际下拉菜单，然后在下拉菜单的选项中添加 . 类。
+        
+    -->
+    <div class="container">
+        <div class="row">
+                <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">下拉菜单</button>
+                            <div class="dropdown-menu">
+                                <h4>链接选项</h4>
+                                <a class="dropdown-item" href="#">链接地址1</a>
+                                <a class="dropdown-item" href="#">链接地址2</a>
+                            </div>
+                </div>
+                <!--.dropdown-divider 类用于在下拉菜单中创建一个水平的分割线：-->
+                <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">下拉菜单</button>
+                            <div class="dropdown-menu">
+                                <h4>链接选项</h4>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">链接地址1</a>
+                                <a class="dropdown-item" href="#">链接地址2</a>
+                            </div>
+                </div>
+                <!--.dropdown-header 类用于在下拉菜单中添加标题：-->
+                <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">下拉菜单</button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-header">学习链接</div>
+                                <a class="dropdown-item" href="#">链接地址1</a>
+                                <a class="dropdown-item" href="#">链接地址2</a>
+                                <div class="dropdown-header">资源链接</div>
+                                <a class="dropdown-item" href="#">链接地址1</a>
+                                <a class="dropdown-item" href="#">链接地址2</a>
+                            </div>
+                </div>
+                <!--
+                .active 类会让下拉菜单的选项高亮显示 (添加蓝色背景)。
+                如果要禁用下拉菜单的选项，可以使用.disabled 类。如果我们想让下拉菜单右对齐，可以在元素上的
+                 .dropdown-menu 类后添加 .dropdown-menu-right 类。
+                如果你希望下拉菜单向上弹出，可以将 <div> 元素的 class="dropdown" 替换为 "dropup":
+                -->
+                <div class="container">
+                        <h2>按钮中的下拉菜单</h2>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-primary">Primary</button>
+                          <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                            <span class="caret"></span>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                          </div>
+                        </div>
+                        
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-secondary">Secondary</button>
+                          <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                            <span class="caret"></span>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                          </div>
+                        </div>
+                      
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-success">Success</button>
+                          <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                            <span class="caret"></span>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                          </div>
+                        </div>
+                      
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-info">Info</button>
+                          <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                            <span class="caret"></span>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                          </div>
+                        </div>
+                      
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-warning">Warning</button>
+                          <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                            <span class="caret"></span>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                          </div>
+                        </div>
+                      
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-danger">Danger</button>
+                          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                            <span class="caret"></span>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                          </div>
+                        </div>
+        </div>
+    </div>
+
+</body>
+<script>
+
+</script>
+</html>

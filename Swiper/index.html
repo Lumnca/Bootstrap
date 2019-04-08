@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+    <title>Swiper教程</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.esm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.esm.bundle.js"></script>
+    <style>
+        .swiper-slide{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            font-size: 32px;
+            font-weight: 700;
+            color: aliceblue;
+        }
+        pre{
+            color: #6699ff;
+            border: 3px double #9b59b6;
+            font-weight: 500;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h2{
+            color: #a03f8b;
+        }
+        p{
+            font-weight: 500;
+            font-size: 19px;
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-container1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background: #5bad87;">欢迎使用Swiper</div>
+            <div class="swiper-slide" style="background: #1d7d8a;">分页轮播神器</div>
+            <div class="swiper-slide" style="background: #a03f8b;">自制教程</div>
+        </div>
+    </div>
+</body>
+<script>
+var mySwiper = new Swiper ('.swiper-container1', {
+    autoplay : true
+  }) 
+</script>
+</html>

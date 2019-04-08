@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 网格系统</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/windows.png">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/bootstrap.js"></script>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+        <!--.collapse 类用于指定一个折叠元素 (实例中的 <div>); 点击按钮后会在隐藏与显示之间切换。
+        控制内容的隐藏与显示，需要在 <a> 或 <button> 元素上添加 data-toggle="collapse" 属性。 data-target="#id" 属性是对应折叠的内容 (<div id="demo">)。
+        注意: <a> 元素上你可以使用 href 属性来代替 data-target 属性:
+        默认情况下折叠的内容是隐藏的，你可以添加 .show 类让内容默认显示:
+        -->
+
+        <div class="container">
+            <!--a标签-->
+            <a href="#demo" class="btn btn-primary" data-toggle="collapse">点击显示/隐藏内容</a>
+            <!--按钮标签-->
+            <button class="btn btn-warning" data-toggle="collapse" data-target="#demo" >点击显示/隐藏内容</button>
+            <div id="demo" class="collapse">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+
+        </div>
+        <!--折叠手风琴-->
+        <div class="container">
+            <!--  声明.card类  -->
+            <div class="card">  
+                <!-- 声明.card-header  -->             
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseOne">选项一</a>
+                    </div>
+                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                             #1 内容：菜鸟教程 -- 学的不仅是技术，更是梦想！！！
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">选项二</a>
+                        </div>
+                        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                #2 内容：菜鸟教程 -- 学的不仅是技术，更是梦想！！！
+                            </div>
+                            <div class="card-body">
+                                    #2 内容：菜鸟教程 -- 学的不仅是技术，更是梦想！！！
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                                选项三
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                #3 内容：菜鸟教程 -- 学的不仅是技术，更是梦想！！！
+                            </div>
+                        </div>
+                    </div>
+        </div>
+</body>
+</html>
