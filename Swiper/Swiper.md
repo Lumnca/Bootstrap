@@ -92,7 +92,7 @@ var mySwiper = new Swiper ('.swiper-container', {
 
 Swiper采用构造方法形式声明，第一个参数为外层div的类名，需要加上'.',第二个参数是配置项。我们这里只包含了一个属性值 autoplay 这是一个自动切换的轮播图。
 
-[实体样式](#index.html)
+[实体样式](index.html)
 
 
 

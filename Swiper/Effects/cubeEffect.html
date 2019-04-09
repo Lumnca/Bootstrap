@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+    <title>cubeEffect配置项</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <link  rel="icon" href="../img/windows.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.esm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.esm.bundle.js"></script>
+    <style>
+        .bor{
+            width: 400px;
+            height: 800px;
+            background: #7e567e;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container bor">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <img class="swiper-slide" src="../img/BOSS3.png" width="300" height="500">
+                        <img class="swiper-slide" src="../img/BOSS4.png" width="300" height="500">
+                        <img class="swiper-slide" src= "../img/BOSS6.png" width="300" height="500">
+                        <img class="swiper-slide" src="../img/BOSS7.png" width="300" height="500">
+                    </div>
+                </div>
+        </div>  
+    </div>  
+
+</body>
+<script>
+var mySwiper = new Swiper('.swiper-container',{
+    speed : 3000,
+    autoplay : true,
+    effect : 'cube',
+    cubeEffect: {
+        slideShadows: true,
+        shadow: true,
+        shadowOffset: 40,
+        shadowScale: 0.88
+    }
+})
+</script>
+</html>

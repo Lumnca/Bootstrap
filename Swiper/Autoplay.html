@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+    <title>autoplay配置项</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.esm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.esm.bundle.js"></script>
+    <style>
+        .title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-slide{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            font-size: 32px;
+            font-weight: 700;
+            color: aliceblue;
+        }
+        pre{
+            color: #6699ff;
+            border: 3px double #9b59b6;
+            font-weight: 500;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h2{
+            color: #a03f8b;
+            
+
+        }
+        p{
+            font-weight: 500;
+            font-size: 19px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2 class="text-conter"> autoplay配置项 </h2>
+    </div>
+    <div class="swiper-container1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background: #5bad87;">delay : 2000<br>界面1</div>
+            <div class="swiper-slide" style="background: #1d7d8a;">delay : 2000<br>界面2</div>
+            <div class="swiper-slide" style="background: #a03f8b;">delay : 2000<br>界面3</div>
+        </div>
+    </div>
+    <div class="swiper-container2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background: #5bad87;">delay : 1000<br>界面1</div>
+                <div class="swiper-slide" style="background: #1d7d8a;">delay : 1000<br>界面2</div>
+                <div class="swiper-slide" style="background: #a03f8b;">delay : 1000<br>界面3</div>
+            </div>
+    </div>
+    <div class="swiper-container3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background: #5bad87;">delay : 1000<br>stopOnLastSlide : false<br>界面1</div>
+                <div class="swiper-slide" style="background: #1d7d8a;">delay : 1000<br>stopOnLastSlide : false<br>界面2</div>
+                <div class="swiper-slide" style="background: #a03f8b;">delay : 1000<br>stopOnLastSlide : false<br>界面3</div>
+            </div>
+    </div>
+    <div class="swiper-container4">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background: #5bad87;">delay : 2000<br> stopOnLastSlide :true<br>界面1<br>页面到后面就不能切换</div>
+                <div class="swiper-slide" style="background: #1d7d8a;">delay : 2000<br> stopOnLastSlide :true<br>界面2<br>页面到后面就不能切换</div>
+                <div class="swiper-slide" style="background: #a03f8b;">delay : 2000<br> stopOnLastSlide :true<br>界面3<br>页面到后面就不能切换</div>
+            </div>
+    </div>
+    <div class="swiper-container5">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background: #5bad87;">disableOnInteraction : false<br>界面1</div>
+                <div class="swiper-slide" style="background: #1d7d8a;">disableOnInteraction : false<br>界面2</div>
+                <div class="swiper-slide" style="background: #a03f8b;">disableOnInteraction : false<br>界面3</div>
+            </div>
+    </div>
+    <div class="swiper-container6">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background: #5bad87;"> disableOnInteraction : false<br>过渡界面1</div>
+                <div class="swiper-slide" style="background: #1d7d8a;">过渡界面2</div>
+                <div class="swiper-slide" style="background: #a03f8b;">过渡界面3</div>
+            </div>
+    </div>
+    <div class="container">
+        <br>
+        <button onclick="stop()" class="btn btn-primary">停止状态</button>
+        <button onclick="start()" class="btn btn-primary">开启状态</button>
+    </div>
+   
+</body>
+<script>
+var mySwiper = new Swiper ('.swiper-container1', {
+    autoplay : {
+        delay : 2000
+    }
+  }); 
+  var mySwiper2 = new Swiper ('.swiper-container2', {
+    autoplay : {
+        delay : 1000
+    }
+  });
+  var mySwiper3 = new Swiper ('.swiper-container3', {
+    autoplay : {
+        delay : 1000,
+        stopOnLastSlide : false
+    }
+  });
+  var mySwiper4 = new Swiper ('.swiper-container4', {
+    autoplay : {
+        delay : 2000,
+        stopOnLastSlide :true
+    }
+  }); 
+  var mySwiper5 = new Swiper ('.swiper-container5', {
+    autoplay : {
+        delay : 2000,
+        stopOnLastSlide : false,
+        disableOnInteraction : true
+    }
+  }); 
+  var mySwiper6 = new Swiper ('.swiper-container6', {
+      speed : 5000,
+    autoplay : {
+        delay : 1000,
+        waitForTransition : false
+    }
+  }); 
+
+if(mySwiper.autoplay.running){
+    console.log("已开启自动播放");
+}
+else{
+    console.log("未开启自动播放");
+}
+
+function stop(){
+    mySwiper6.autoplay.stop();
+}
+function start(){
+    mySwiper6.autoplay.start();
+}
+
+
+
+
+
+</script>
+</html>

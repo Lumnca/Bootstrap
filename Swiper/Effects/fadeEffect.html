@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+    <title>fadeEffect配置项</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link  rel="icon" href="../img/windows.png">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.esm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.esm.bundle.js"></script>
+    <style>
+        .swiper-slide{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            font-size: 32px;
+            font-weight: 700;
+            color: aliceblue;
+        }
+        h2{
+            color: #a03f8b;
+        }
+        p{
+            font-weight: 500;
+            font-size: 19px;
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-container1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background: #5bad87;height:200px;width:400px;">转换样式slide</div>
+            <div class="swiper-slide" style="background: #1d7d8a;height:250px;width:300px;">转换样式slide</div>
+            <div class="swiper-slide" style="background: #a03f8b;height:300px;width:500px;">转换样式slide</div>
+        </div>
+    </div>
+</body>
+<script>
+ var mySwiper = new Swiper ('.swiper-container1', {
+    speed : 4500,
+    autoplay : true,
+    //默认为slide,fade,cube,coverflow,filp
+    effect : 'fade',
+    fadeEffect: {
+        crossFade: true,
+    }
+})
+</script>
+</html>
