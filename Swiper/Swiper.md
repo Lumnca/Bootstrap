@@ -82,7 +82,7 @@ var mySwiper = new Swiper ('.swiper-container', {
     </div>
 ```
 
-外层div的class名可以自定义，但是内部class名称不能改变。如上首先声明一个实现的区域即：swiper-container，可自行定义名称，然后再声明swiper-wrapper类代表着在这个区域中切换以及分页，最后就是切换选项：swiper-slide类。完成后，需要初始化这个实现的区域，即外层div：
+外层div的class名可以自定义，其中class中为样式，不能做修改。如上首先声明一个实现的区域即：swiper-container(所有class的均代表轮换样式不可做修改)，可自行定义名称，最好不用class取这个dom，单个可以取class名作为dom，多个建议使用id获取dom(多个class就会有很多个)，然后再声明swiper-wrapper类代表着在这个区域中切换以及分页，最后就是切换选项：swiper-slide类。完成后，需要初始化这个实现的区域，即外层div：
 
 ```javascript
 var mySwiper = new Swiper ('.swiper-container', {
@@ -90,7 +90,7 @@ var mySwiper = new Swiper ('.swiper-container', {
   }) 
 ```
 
-Swiper采用构造方法形式声明，第一个参数为外层div的类名，需要加上'.',第二个参数是配置项。我们这里只包含了一个属性值 autoplay 这是一个自动切换的轮播图。
+Swiper采用构造方法形式声明，第一个参数为外层div的类名，需要加上dom标识符('.'或者'#'),第二个参数是配置项。我们这里只包含了一个属性值 autoplay 这是一个自动切换的轮播图。
 
 [实体样式](index.html)
 

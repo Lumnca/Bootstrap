@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+    <title>Pagination配置参数</title>
+
+    <link  rel="icon" href="../img/windows.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.0/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.0/css/swiper.min.css">   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.0/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.0/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.0/js/swiper.esm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.0/js/swiper.esm.bundle.js"></script>
+    <style>
+        .swiper-slide{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            font-size: 32px;
+            font-weight: 700;
+            color: aliceblue;
+        }
+        h2{
+            color: #a03f8b;
+        }
+        p{
+            font-weight: 500;
+            font-size: 19px;
+        }
+        .swiper-container{
+            border: 2px solid rgb(92, 163, 245);
+            border-radius: 5px;
+        }
+        .swiper{
+            border: 1px solid;
+            border-radius: 50%;
+            background: rgb(146, 110, 110);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-container" id="one">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background: #5bad87;height:300px;">转换样式slide</div>
+            <div class="swiper-slide" style="background: #1d7d8a;height:300px;">转换样式slide</div>
+            <div class="swiper-slide" style="background: #a03f8b;height:300px;">转换样式slide</div>
+        </div>      
+        <span class="swiper-pagination" id="pone"></span> 
+    </div>
+</body>
+<script>
+var mySwiper = new Swiper('#one',{
+    autoplay : true,
+    pagination: {
+        el: '#pone',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' +"<span class='swiper'>"+ (index + 1) +"</span>" +'</span>';
+        },
+    },
+})
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
