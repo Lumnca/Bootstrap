@@ -57,36 +57,7 @@
         <div class="swiper-button-next" id="b1"></div><!--右箭头-->
     </div>
 
-    <div class="swiper-container" id="p2">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background:#a03f8b">Slide 1</div>
-            <div class="swiper-slide" style="background:#7b77b8">Slide 2</div>
-            <div class="swiper-slide" style="background:#219c88">Slide 3</div>
-        </div>
-        <!--
-             默认为蓝色，有黑白色的类 swiper-button-white， swiper-button-black
-        -->
-        <div class="swiper-button-prev swiper-button-white" id="a2" ></div><!--左箭头-->
-        <div class="swiper-button-next swiper-button-black"  id="b2"></div><!--右箭头-->
-    </div>
-
-
-    <div class="swiper-container" id="p3">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background:#a03f8b">Slide 1</div>
-            <div class="swiper-slide" style="background:#7b77b8">Slide 2</div>
-            <div class="swiper-slide" style="background:#219c88">Slide 3</div>
-        </div>
-        <!--
-             默认为蓝色，有黑白色的类 swiper-button-white， swiper-button-black
-             默认的按钮为图片，修改颜色无作用，需要重写该类的背景图片才行
-        -->
-        <div class="swiper-button-prev swiper-button-white" id="a3" ></div><!--左箭头-->
-        <div class="swiper-button-next my-swiper-button"  id="b3"></div><!--右箭头  my-swiper-button自定义-->
-    </div>
-
     <script language="javascript"> 
-    //原始按钮切换形式
       var mySwiper = new Swiper('#p1', {
         navigation: {
           prevEl: '#a1'  ,//绑定左箭头
@@ -94,25 +65,10 @@
     
         },
       });
-      
-      //
-      var mySwiper2 = new Swiper('#p2', {
-        navigation: {
-          prevEl: '#a2',  //绑定左箭头
-          nextEl: '#b2',  //绑定右箭头
-          hideOnClick: true //点击界面隐藏按钮
-        },
-      });
 
-      var mySwiper3 = new Swiper('#p3', {
-        navigation: {
-          prevEl: '#a3'  ,//绑定左箭头
-          nextEl: '#b3'  ,//绑定右箭头
-          hideOnClick : true,
-          disabledClass: 'my-button-disabled',  //当按钮不能点击时的触发的类名
-          hiddenClass: 'my-button-hidden', //按钮隐藏时触发的类名
-        },
-      });
+      //获取按钮的dom
+      
+      
     </script>
 </body>
 </html>
