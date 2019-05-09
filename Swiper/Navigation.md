@@ -44,6 +44,7 @@ var mySwiper2 = new Swiper('#p2', {
 ```
 
 **disabledClass ： className**: 当按钮不能点击时的触发的类名
+
 **hiddenClass ： className**: 按钮隐藏时触发的类名
 
 ```javascript
@@ -70,10 +71,14 @@ var mySwiper2 = new Swiper('#p2', {
 
 ```
 
-###按钮样式dom###
+### 按钮样式dom与方法 ###
 
 navigation.$nextEl 后按钮DOM
 
 navigation.$prevEl 前按钮DOM
 
+navigationHide按钮隐藏触发函数
 
+navigationShow按钮显示触发函数
+
+函数在on属性中声明执行。
