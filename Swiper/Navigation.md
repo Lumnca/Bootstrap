@@ -70,7 +70,10 @@ var mySwiper2 = new Swiper('#p2', {
 
 ```
 
-navigation.$nextEl.css('display','none');
+###按钮样式dom###
 
-.navigation.$nextEl.css('display','block');  
+navigation.$nextEl 后按钮DOM
+
+navigation.$prevEl 前按钮DOM
+
 
