@@ -49,32 +49,50 @@
 <body>
     <div class="swiper-container" id="p1">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background:#a03f8b">Slide 1</div>
-            <div class="swiper-slide" style="background:#7b77b8">Slide 2</div>
-            <div class="swiper-slide" style="background:#219c88">Slide 3</div>
+            <div class="swiper-slide" style="background:#a03f8b">滑轮页面1</div>
+            <div class="swiper-slide" style="background:#7b77b8">滑轮页面2</div>
+            <div class="swiper-slide" style="background:#219c88">滑轮页面3</div>
         </div>
-        <div class="swiper-button-prev" id="a1"></div><!--左箭头-->
-        <div class="swiper-button-next" id="b1"></div><!--右箭头-->
+    </div>
+    <hr>
+    <div class="swiper-container" id="p2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background:#a03f8b">键盘页面1</div>
+            <div class="swiper-slide" style="background:#7b77b8">键盘页面2</div>
+            <div class="swiper-slide" style="background:#219c88">键盘页面3</div>
+        </div>
+    </div>
+    <hr>
+    <div class="swiper-container" id="p3">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background:#a03f8b">滑轮页面1</div>
+            <div class="swiper-slide" style="background:#7b77b8">滑轮页面2</div>
+            <div class="swiper-slide" style="background:#219c88">滑轮页面3</div>
+        </div>
     </div>
 
     <script language="javascript"> 
-      var mySwiper = new Swiper('#p1', {
-        navigation: {
-          prevEl: '#a1'  ,//绑定左箭头
-          nextEl: '#b1'   //绑定右箭头
+    var mySwiper = new Swiper('#p1', {
+        //启用鼠标滑轮
+        mousewheel: true,
+        onlyInViewport: false
+    });
+    var mySwiper2 = new Swiper('#p2',{
+        //启用键盘<- 和 ->键
+        keyboard : true,
+        on:{
+            //keyPress回调函数。在允许键盘控制状态下，按键盘时会触发这个函数。
+            keyPress: function(event){
+                alert('你按了键盘,键盘码：'+event);
+            },
         },
-        slideChangeTransitionEnd: function(){
-            if(this.isEnd){
-                this.navigation.$nextEl.css('display','none');
-            }else{
-                this.navigation.$nextEl.css('display','block');  
-            }
-        },
-      });
-      mySwiper.navigation.update();
-      
-     
-      
+    });
+    var mySwiper3 = new Swiper('#p3',{
+        freeMode: true,
+        mousewheel :{
+            sensitivity : 0.1,
+        }
+    })
     </script>
 </body>
 </html>

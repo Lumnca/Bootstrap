@@ -53,27 +53,21 @@
             <div class="swiper-slide" style="background:#7b77b8">Slide 2</div>
             <div class="swiper-slide" style="background:#219c88">Slide 3</div>
         </div>
-        <div class="swiper-button-prev" id="a1"></div><!--左箭头-->
-        <div class="swiper-button-next" id="b1"></div><!--右箭头-->
+        <div class="swiper-scrollbar" id="s1"></div>
     </div>
 
     <script language="javascript"> 
       var mySwiper = new Swiper('#p1', {
-        navigation: {
-          prevEl: '#a1'  ,//绑定左箭头
-          nextEl: '#b1'   //绑定右箭头
-        },
-        slideChangeTransitionEnd: function(){
-            if(this.isEnd){
-                this.navigation.$nextEl.css('display','none');
-            }else{
-                this.navigation.$nextEl.css('display','block');  
-            }
-        },
+            //添加滚动条
+            scrollbar: {
+                el: '#s1',
+                hide: true, //不点击时是否自动隐藏，默认false，不隐藏
+                draggable : true, //滚动条是否可拖动
+                snapOnRelease: false, //不按整页滑动，可任意滑动距离
+                dragSize: 30, //滑动条宽度
+            },
       });
-      mySwiper.navigation.update();
-      
-     
+
       
     </script>
 </body>
