@@ -10,27 +10,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.esm.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.esm.bundle.js"></script>
     <style>
-        .swiper-container{
+        .swiper-slide{
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 200px;
+            height: 400px;
             font-size: 32px;
             font-weight: 700;
-            color: rgb(159, 188, 212);
+            color: aliceblue;
         }
     </style>
 </head>
 <body>
-    <div class="swiper-container">
-        <div class="swiper-wrapper"></div>
+    <div class="swiper-container" id="a1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background:#a03f8b">Slide 1</div>
+            <div class="swiper-slide" style="background:#7b77b8">Slide 2</div>
+            <div class="swiper-slide" style="background:#219c88">Slide 3</div>
+        </div>
     </div>
 <script>
-        var swiper = new Swiper('.swiper-container', {
-            virtual: {
-            addSlidesAfter: 3, 
-            slides: ['Slide 1', 'Slide 2', 'Slide 3', 'Slide 4', 'Slide 5'],
-            },
+        var swiper = new Swiper('#a1', {
+            slidesPerView : 2,
         });
 </script>
 </body>
